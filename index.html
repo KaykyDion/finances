@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevFinances</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="header_title">DevFinances</h1>
+    </header>
+    <section class="transaction-options">
+      <form class="transaction-form">
+        <h2 class="transaction-form_title">New transaction:</h2>
+        <label for="transaction-form_input-name">Name:</label>
+        <input id="transaction-form_input-name" type="text" />
+        <label for="transaction-form_input-value">Value:</label>
+        <input id="transaction-form_input-value" type="number" />
+        <button type="submit" class="transaction-form_btn">
+          Create transaction +
+        </button>
+      </form>
+      <div class="transaction-balance">
+        <h2>Your Balance:</h2>
+        <p id="total-balance"></p>
+      </div>
+    </section>
+
+    <section class="transactions">
+      <h2 class="transactions_title">Transactions</h2>
+      <div class="transactions_list"></div>
+    </section>
+
+    <section class="modal-container">
+      <div class="modal">
+        <button class="modal_close-btn">X</button>
+
+        <form id="edit-form">
+          <h3>Do you want to modify this transaction?</h3>
+          <span id="transaction-to-edit"></span>
+
+          <label for="edit-value-input">New value:</label>
+          <input id="edit-value-input" type="number" />
+
+          <label for="edit-name-input">New name:</label>
+          <input id="edit-name-input" type="text" />
+
+          <div>
+            <button id="confirm-edit-btn" type="submit">Confirm</button>
+            <button id="cancel-edit-btn" type="button">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
